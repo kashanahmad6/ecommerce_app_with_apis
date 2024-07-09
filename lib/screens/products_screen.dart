@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:shopping_app_with_apis/model/item_model.dart';
 import 'package:shopping_app_with_apis/provider/shop_provider.dart';
-import 'package:shopping_app_with_apis/screens/product_details_screen.dart';
+import 'package:shopping_app_with_apis/screens/filtered_product_screen.dart';
 import 'package:shopping_app_with_apis/utils/myproduct.dart';
 
 // ignore: must_be_immutable
@@ -23,10 +23,7 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
-    return
-        // final filtereditems = items!
-
-        Consumer<ShopProvider>(
+    return Consumer<ShopProvider>(
       builder: (context, value, child) {
         final filtereditems = widget.filteredlist;
 
@@ -40,7 +37,7 @@ class _ProductPageState extends State<ProductPage> {
               return GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return ProductDetails(item: item);
+                    return FilteredProductScreen(item: item);
                   }));
                 },
                 child: Myproduct(
@@ -52,10 +49,5 @@ class _ProductPageState extends State<ProductPage> {
             });
       },
     );
-    // } else if (snapshot.hasError) {
-    //   return Text(snapshot.error.toString());
-    // } else {
-    //   return const Center(child: CircularProgressIndicator());
-    // }
   }
 }

@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopping_app_with_apis/provider/bottom_navigation_bar_provider.dart';
 import 'package:shopping_app_with_apis/screens/cart_screen.dart';
-import 'package:shopping_app_with_apis/screens/main_screen.dart';
+import 'package:shopping_app_with_apis/screens/shopping_screen.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class BottomNaviagationScreen extends StatefulWidget {
+  const BottomNaviagationScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<BottomNaviagationScreen> createState() =>
+      _BottomNaviagationScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _BottomNaviagationScreenState extends State<BottomNaviagationScreen> {
   List<Widget> screens = [
-    const MainScreen(),
+    const ShoppingScreen(),
     const CartScreen(),
   ];
 

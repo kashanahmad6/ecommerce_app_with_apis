@@ -8,9 +8,9 @@ import 'package:shopping_app_with_apis/model/item_model.dart';
 import 'package:shopping_app_with_apis/provider/cart_provider.dart';
 
 // ignore: must_be_immutable
-class ProductDetails extends StatelessWidget {
+class FilteredProductScreen extends StatelessWidget {
   Item item;
-  ProductDetails({
+  FilteredProductScreen({
     super.key,
     required this.item,
   });
@@ -147,14 +147,6 @@ class ProductDetails extends StatelessWidget {
                                     cartprovider.addToCart(Cart(
                                         item: item, quanity: quantity.value));
                                     Navigator.pop(context);
-
-                                    // Navigator.push(context,
-                                    //     MaterialPageRoute(builder: (context) {
-                                    //   return CartScreen(
-                                    //     cart: Cart(
-                                    //         item: item, quanity: quantity.value),
-                                    //   );
-                                    // }));
                                   },
                                   child: const Text('yes'),
                                 ),

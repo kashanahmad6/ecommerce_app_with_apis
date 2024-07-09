@@ -7,14 +7,14 @@ import 'package:shopping_app_with_apis/utils/horizontal_products.dart';
 import 'package:shopping_app_with_apis/utils/my_chip.dart';
 import 'package:provider/provider.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class ShoppingScreen extends StatefulWidget {
+  const ShoppingScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<ShoppingScreen> createState() => _ShoppingScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _ShoppingScreenState extends State<ShoppingScreen> {
   @override
   void initState() {
     super.initState();

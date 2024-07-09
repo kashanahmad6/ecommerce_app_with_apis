@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopping_app_with_apis/provider/shop_provider.dart';
-import 'package:shopping_app_with_apis/screens/home_page.dart';
+import 'package:shopping_app_with_apis/screens/bottom_navigation_bar_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         .getItems()
         .then((value) {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return const HomePage();
+        return const BottomNaviagationScreen();
       }));
     });
   }

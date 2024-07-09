@@ -31,36 +31,3 @@ class _HorizontailProductsState extends State<HorizontailProducts> {
     );
   }
 }
-
-
-
-//  FutureBuilder(
-//       future: ApiServices().getData(),
-//       builder: (context, snapshot) {
-//         if (snapshot.hasData) {
-//           final items = snapshot.data;
-//           return ListView.builder(
-//               scrollDirection: Axis.horizontal,
-//               itemCount: items!.length,
-//               itemBuilder: (context, index) {
-//                 final item = items[index];
-//                 return Container(
-//                   width: 180,
-//                   margin: const EdgeInsets.only(bottom: 10),
-//                   decoration: BoxDecoration(
-//                     image: DecorationImage(
-//                       fit: BoxFit.contain,
-//                       image: NetworkImage(item.imgurl),
-//                     ),
-//                   ),
-//                 );
-//               });
-//         } else if (snapshot.hasError) {
-//           return Text(snapshot.error.toString());
-//         } else {
-//           return const Center(
-//             child: CircularProgressIndicator(),
-//           );
-//         }
-//       },
-//     );
